@@ -6,7 +6,7 @@ import Logo from "../assets/images/navlogo.svg";
 import { useEffect, useState } from "react";
 import { useConnect } from "wagmi";
 import { injected } from "wagmi/connectors";
-import logo from "../assets/equivestLogo.svg";
+import logo from "../../assets/equivestLogo.svg";
 import notification from "../assets/notification.svg";
 import user from "../assets/user.svg";
 import setting from "../assets/setting.svg";
@@ -46,14 +46,14 @@ const DashHeader: FC<HeaderProps> = ({ title, backBtn }) => {
 							<Image src={logo} alt="logo" className="cursor-pointer" />
 						</Link>
 						<div className="hidden lg:flex items-center gap-x-6 cursor-pointer">
-							{backBtn && (
+							{/* {backBtn && (
 								<span
 									className={style.menuActive}
 									onClick={() => window.history.back()}
 								>
 									Back
 								</span>
-							)}
+							)} */}
 							<Link href="/dashboard" className={style.menuActive}>
 								Dashboard
 							</Link>

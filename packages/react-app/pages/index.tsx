@@ -81,7 +81,7 @@ export default function Home() {
     }
 
     return (
-        <div className="overflow-x-hidden overflow-y-scroll">
+        <div className="overflow-x-hidden overflow-y-auto">
 			<MainLayout>
 				<MainHero />
 				<ChooseBetter />

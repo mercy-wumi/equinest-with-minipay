@@ -1,4 +1,4 @@
-import DashHeader from "../../component/DashHeader";
+import DashHeader from "./DashHeader";
 import CommunityCard from "../../component/CommunityCard";
 import { useState } from "react";
 import palmoil from "../../assets/palmoil.svg";
@@ -65,7 +65,7 @@ const Invest = () => {
 
   const [category, setCategory] = useState(communities);
 
-  const handleCategory = (tab:any) => {
+  const handleCategory = (tab: any) => {
     setActiveTab(tab);
 
     if (tab === "All") {

@@ -1,4 +1,4 @@
-import DashHeader from "../../../component/DashHeader";
+import DashHeader from "../DashHeader";
 import { PrimaryButton } from "../../../component/Button";
 // import { Link, useSearchParams } from "next/link";
 import Link from "next/link";
