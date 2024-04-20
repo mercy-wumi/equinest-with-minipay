@@ -1,5 +1,5 @@
 import { FC, ReactNode } from "react";
-import DashHeader from "../pages/dashboard/DashHeader";
+import DashHeader from "../component/DashHeader";
 
 interface Props {
   children: ReactNode;

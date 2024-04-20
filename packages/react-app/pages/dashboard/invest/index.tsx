@@ -1,12 +1,12 @@
-import DashHeader from "./DashHeader";
-import CommunityCard from "../../component/CommunityCard";
+import DashHeader from "@/component/DashHeader";
+import CommunityCard from "@/component/CommunityCard";
 import { useState } from "react";
-import palmoil from "../../assets/palmoil.svg";
-import transport from "../../assets/transport.svg";
-import chicken from "../../assets/chicken.svg";
-import house from "../../assets/house.svg";
-import farm from "../../assets/farm.svg";
-import catfish from "../../assets/catfish.svg";
+import palmoil from "../../../assets/palmoil.svg";
+import transport from "../../../assets/transport.svg";
+import chicken from "../../../assets/chicken.svg";
+import house from "../../../assets/house.svg";
+import farm from "../../../assets/farm.svg";
+import catfish from "../../../assets/catfish.svg";
 
 const communities = [
   {

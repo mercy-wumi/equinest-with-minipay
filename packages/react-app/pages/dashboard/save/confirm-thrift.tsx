@@ -4,7 +4,7 @@ import authLogo from "../assets/images/authLogo.svg";
 import { PrimaryButton } from "../../../component/Button";
 // import { Link, useNavigate, useLocation } from "react-router-dom";
 // import { userContext } from "../userContext";
-import DashHeader from "../DashHeader";
+import DashHeader from "../../../component/DashHeader";
 import SuccessModal from "../../../component/SuccessModal";
 
 const ConfirmThrift = () => {

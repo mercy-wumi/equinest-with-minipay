@@ -1,7 +1,9 @@
 import CommunityCard from "../../../component/CommunityCard";
-import DashHeader from "../DashHeader";
+import DashHeader from "../../../component/DashHeader";
 import { communities } from "../community";
-import stayhomeComm from "../assets/stayhomeCommunity.svg";
+import stayhomeComm from "../../../assets/stayhomeCommunity.svg";
+
+import Image from "next/image";
 
 const JoinedCommunity = () => {
   return (
@@ -23,7 +25,7 @@ const JoinedCommunity = () => {
               key={index}
             >
               <div className="flex items-center gap-4">
-                <img src={stayhomeComm} alt="joined community" />
+                <Image src={stayhomeComm} alt="joined community" />
                 <p className="font-semibold text-xs md:text-base">
                   {comm.title}
                 </p>

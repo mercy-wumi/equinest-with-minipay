@@ -6,7 +6,7 @@ import Logo from "../assets/images/navlogo.svg";
 import { useEffect, useState } from "react";
 import { useConnect } from "wagmi";
 import { injected } from "wagmi/connectors";
-import logo from "../../assets/equivestLogo.svg";
+import logo from "../assets/equivestLogo.svg";
 import notification from "../assets/notification.svg";
 import user from "../assets/user.svg";
 import setting from "../assets/setting.svg";
@@ -54,7 +54,7 @@ const DashHeader: FC<HeaderProps> = ({ title, backBtn }) => {
 									Back
 								</span>
 							)} */}
-							<Link href="/dashboard" className={style.menuActive}>
+							<Link href="/dashboard" className={style.menus}>
 								Dashboard
 							</Link>
 							<Link href="/dashboard/save" className={style.menus}>

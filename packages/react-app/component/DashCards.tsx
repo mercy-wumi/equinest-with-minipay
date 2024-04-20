@@ -11,10 +11,9 @@ interface Card {
 
 interface Props {
 	card: Card;
-	index: number;
 }
 
-const DashCards: React.FC<Props> = ({ card, index }) => {
+const DashCards: React.FC<Props> = ({ card }) => {
 	const style = {
 		btn: "bg-primaryBlack px-2 md:px-4 py-2 text-white rounded-md font-semibold",
 	};
@@ -22,7 +21,6 @@ const DashCards: React.FC<Props> = ({ card, index }) => {
 	return (
 		<div
 			className="bg-white rounded-2xl flex flex-col gap-4 p-4 md:p-8 shadow-2xl"
-			key={index}
 		>
 			<div className="flex justify-between items-center">
 				<span className="text-xl font-semibold">{card.name}</span>

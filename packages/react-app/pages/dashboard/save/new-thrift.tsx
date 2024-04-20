@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 // import { userContext } from "../userContext";
 
-import DashHeader from "../DashHeader";
+import DashHeader from "../../../component/DashHeader";
 
 interface FormData {
   thriftTitle: string;
