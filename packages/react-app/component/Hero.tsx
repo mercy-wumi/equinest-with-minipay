@@ -6,7 +6,7 @@ import { PrimaryButton } from "./Button";
 
 const Hero = () => {
 	return (
-		<section className="pt-16 px-4 lg:px-0 lg:pt-24 text-center bg-lightGray pb-0 overflow-hidden">
+		<section className="pt-10 px-4 lg:px-0 lg:pt-24 text-center bg-lightGray pb-0 overflow-hidden">
 			<div className="flex flex-col gap-6 lg:gap-10 items-center justify-center pt-8 lg:pt-16 font-['Rubik'] lg:px-16 pb-0">
 				<div className="flex flex-col gap-4 lg:gap-5 items-center justify-center">
 					<h1 className="text-[#fff]  text-[1.7rem] lg:text-6xl w-full lg:w-[75%] lg:leading-[4.5rem] font-semibold">
