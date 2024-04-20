@@ -56,7 +56,7 @@ export default function Navbar() {
 	};
 
 	return (
-		<div className="w-full flex flex-col justify-between gap-3 h-full py-4 px-4 lg:py-5 bg-[#464545] sticky top-0 z-20 md:px-14 lg:px-16 border border-b-borderJoinedComm lg:border-none">
+		<div className={`w-full flex flex-col justify-between gap-3 h-full py-4 px-4 lg:py-5 bg-[#464545] sticky top-0 z-20 md:px-14 lg:px-16 border border-b-borderJoinedComm lg:border-none ${isMobileMenuOpen === true ? "overflow-hidden" : "overflow-visible"}`}>
 			<div className="sm:flex-col relative justify-between items-center">
 				<div className="flex items-center justify-between">
 					<div>
