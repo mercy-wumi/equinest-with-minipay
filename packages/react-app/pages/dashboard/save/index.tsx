@@ -1,5 +1,5 @@
 import Link from "next/link";
-import DashHeader from "../DashHeader";
+import DashHeader from "../../../component/DashHeader";
 // import { useContext } from "react";
 // import { userContext } from "../userContext";
 

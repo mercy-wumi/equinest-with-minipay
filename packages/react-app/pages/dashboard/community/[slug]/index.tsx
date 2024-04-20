@@ -1,14 +1,11 @@
-import DashHeader from "../../../component/DashHeader";
-import { PrimaryButton } from "../../../component/Button";
-// import { Link, useSearchParams } from "next/link";
+import DashHeader from "../../../../component/DashHeader";
 import Link from "next/link";
+import { PrimaryButton } from "@/component/Button";
 
-const CommunityRules = () => {
-  // const [searchParams] = useSearchParams();
-  // const name = searchParams.get("name");
+const TermsnConditions = () => {
   return (
     <>
-      <DashHeader title={`Community`} />
+      <DashHeader title="Terms and Conditions" />
       <div className="px-16 my-8 flex flex-col w-fit mx-auto text-lg">
         <div>
           <p className="font-bold text-2xl mt-8 mb-2">
@@ -146,7 +143,7 @@ const CommunityRules = () => {
               </span>
             </span>
           </div>
-          <Link href="/dashboard/community/joined-communities">
+          <Link href="/dashboard/community/joined-community">
             <PrimaryButton text="Join Community" />
           </Link>
         </div>
@@ -155,4 +152,4 @@ const CommunityRules = () => {
   );
 };
 
-export default CommunityRules;
+export default TermsnConditions;

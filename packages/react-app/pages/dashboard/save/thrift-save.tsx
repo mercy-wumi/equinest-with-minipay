@@ -1,4 +1,4 @@
-import DashHeader from "../DashHeader";
+import DashHeader from "../../../component/DashHeader";
 import Link from "next/link";
 import save from "../../../assets/save.svg";
 import Image from "next/image";

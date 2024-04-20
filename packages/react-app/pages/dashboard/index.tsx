@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import DashCards from "../../component/DashCards";
 
-import DashHeader from "./DashHeader";
+import DashHeader from "../../component/DashHeader";
 // import { userContext } from "../userContext";
 
 const cards = [

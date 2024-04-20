@@ -1,5 +1,5 @@
 import CommunityCard from "../../../component/CommunityCard";
-import DashHeader from "../DashHeader";
+import DashHeader from "../../../component/DashHeader";
 import stayathomemums from "../../../assets/stayathomemums.svg";
 import business from "../../../assets/business.svg";
 import working from "../../../assets/working.svg";
