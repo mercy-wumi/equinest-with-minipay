@@ -110,7 +110,7 @@ const Footer: React.FC = () => {
       <div className="lg:pt-2 text-sm lg:text-base text-center">
         <div className="border-[0.3px] w-full lg:mt-10 border-[#d9d9d971]"></div>
         <p className="py-3 lg:py-5 font-light">
-          2023 Equinest. All Rights Reserved
+          2024 Equinest. All Rights Reserved
         </p>
       </div>
     </footer>
