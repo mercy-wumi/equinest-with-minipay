@@ -9,7 +9,7 @@ const TermsnConditions = () => {
       <div className="px-16 my-8 flex flex-col w-fit mx-auto text-lg">
         <div>
           <p className="font-bold text-2xl mt-8 mb-2">
-            Community roles and regulations
+            Community rules and regulations
           </p>
           <span>
             Make sure you read and understand the rule and regulations before
@@ -52,7 +52,7 @@ const TermsnConditions = () => {
           </li>
           <li className="list-disc">
             Respect different parenting styles: Avoid judging or criticizing
-            other members' parenting choices.
+            other members parenting choices.
           </li>
           <li className="list-disc">
             Focus on solutions: If raising a problem, suggest solutions or
@@ -75,7 +75,7 @@ const TermsnConditions = () => {
             to the moderators immediately
           </li>
           <li className="list-disc">
-            Moderators' discretion: Moderators have the final say in enforcing
+            Moderators discretion: Moderators have the final say in enforcing
             the rules and resolving disputes
           </li>
           <li className="list-disc">

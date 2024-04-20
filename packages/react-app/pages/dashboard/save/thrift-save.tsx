@@ -11,7 +11,7 @@ const ThriftSave = () => {
         <Image src={save} alt="save" />
         <div className="flex items-center flex-col">
           <p className="text-2xl w-3/4 text-center">
-            You currently don't have any thrift savings
+            You currently do not have any thrift savings
           </p>
           <div className="flex-col md:flex-row flex gap-8 mt-8">
             <Link href="/dashboard/save/new-thrift">
