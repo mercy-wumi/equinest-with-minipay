@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import mastercard from "../assets/mastercard.svg";
+import Link from "next/link";
 
 interface Card {
 	name: string;
@@ -33,8 +34,8 @@ const DashCards: React.FC<Props> = ({ card }) => {
 			{card.btn && (
 				<div className="flex gap-4">
 					<button className={style.btn}>Deposit</button>
-					<button className={style.btn}>Invest</button>
-					<button className={style.btn}>Transfer</button>
+					<button className={style.btn}><Link href="/dashboard/invest">Invest</Link></button>
+					<button className={style.btn}>Send</button>
 				</div>
 			)}
 			{card.profit_loss && (

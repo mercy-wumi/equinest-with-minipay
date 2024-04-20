@@ -7,19 +7,19 @@ import DashHeader from "../../component/DashHeader";
 const cards = [
   {
     name: "Total Balance",
-    amount: "#10,700.00",
+    amount: "N10,700.00",
     btn: true,
     profit_loss: false,
   },
   {
-    name: "Investment Savings",
-    amount: "#5,000.00",
+    name: "Lock Savings",
+    amount: "N5,000.00",
     btn: false,
     profit_loss: true,
   },
   {
-    name: "Thrift Savings",
-    amount: "#2,700.00",
+    name: "Withdrawn Savings",
+    amount: "N2,700.00",
     btn: false,
     profit_loss: true,
   },
@@ -27,46 +27,41 @@ const cards = [
 
 const transactions = [
   {
-    bankName: "Zenith",
-    transType: "stock",
+    transType: "Lock",
     date: "12/09/23",
     time: "2:00pm",
-    amount: "#50.00",
-    status: "completed",
+    amount: "N50.00",
+    status: "successful",
   },
   {
-    bankName: "Zenith",
-    transType: "stock",
+    transType: "Withdraw",
     date: "12/09/23",
     time: "2:00pm",
-    amount: "#50.00",
-    status: "completed",
+    amount: "N10.00",
+    status: "successful",
   },
   {
-    bankName: "Zenith",
-    transType: "stock",
+    transType: "Lock",
     date: "12/09/23",
     time: "2:00pm",
-    amount: "#50.00",
-    status: "completed",
+    amount: "N100.00",
+    status: "successful",
   },
   {
-    bankName: "Zenith",
-    transType: "stock",
+    transType: "Lock",
     date: "12/09/23",
     time: "2:00pm",
-    amount: "#50.00",
-    status: "completed",
+    amount: "N50.00",
+    status: "successful",
   },
 ];
 const DashOverview = () => {
-  //  const { emailAddress, fullName } = useContext(userContext);
   const style = {
     tableData: "flex-1",
   };
   return (
     <>
-      <DashHeader title="Welcome back, !" backBtn={false} />
+      <DashHeader title="Welcome back!" backBtn={false} />
       <div className="px-4 md:px-8 xl:px-16 mb-16">
         <div className="-mt-4 xl:-mt-10 grid-cols-1 md:grid-cols-2 grid xl:grid-cols-3 gap-8">
           {cards.map((card, index) => (
@@ -77,8 +72,7 @@ const DashOverview = () => {
           <p className="text-2xl font-semibold">Transaction History</p>
           <table className="w-full mt-4 text-center">
             <thead className="text-darkGray pb-4 flex w-full">
-              <th className={style.tableData}>Name</th>
-              <th className={style.tableData}>Type</th>
+              <th className={style.tableData}>Transaction</th>
               <th className={style.tableData}>Date</th>
               <th className={style.tableData}>Amount</th>
               <th className={style.tableData}>Status</th>
@@ -89,7 +83,6 @@ const DashOverview = () => {
                   className="border-t-[1px] flex w-full border-darkGray border-opacity-10 py-4"
                   key={index}
                 >
-                  <td className={style.tableData}>{tran.bankName}</td>
                   <td className={style.tableData}>{tran.transType}</td>
                   <td className="flex flex-col flex-1">
                     <span>{tran.date}</span>

@@ -15,9 +15,11 @@ interface Props {
 
 const CommunityCard: React.FC<Props> = ({ comm }) => {
   const router = useRouter();
+
   return (
     <div
       onClick={() =>
+        window.location.pathname !== "/dashboard/invest" &&
         router.push(`/dashboard/community/terms_and_conditions=${comm.title}`)
       }
       className="cursor-pointer"
