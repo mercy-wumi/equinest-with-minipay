@@ -17,7 +17,7 @@ const MobileNavbar: React.FC<MobileNavbarProps> = ({ links, isOpen }) => {
 		<div
 			className={`transition-all duration-200 ${
 				isOpen
-					? "fixed mx-auto bg-darkGray bg-opacity-80 inset-x-0 top-[5.5rem] z-30 h-full"
+					? "fixed mx-auto bg-darkGray bg-opacity-80 inset-x-0 inset-y-0 top-[5.5rem] bottom-0 z-30 h-full overflow-hidden"
 					: "hidden"
 			}`}
 		>
