@@ -54,7 +54,7 @@ const DashHeader: FC<HeaderProps> = ({ title, backBtn }) => {
 									Back
 								</span>
 							)} */}
-							<Link href="/dashboard" className={style.menuActive}>
+							<Link href="/dashboard" className={style.menus}>
 								Dashboard
 							</Link>
 							<Link href="/dashboard/save" className={style.menus}>
