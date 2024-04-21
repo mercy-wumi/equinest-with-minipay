@@ -21,9 +21,9 @@ const DashCards: React.FC<Props> = ({ card }) => {
 
 	return (
 		<div
-			className="bg-white rounded-2xl flex flex-col gap-4 p-4 md:p-8 shadow-2xl"
+			className="bg-white rounded-2xl flex flex-col gap-4 p-4 py-6 md:p-8 shadow-2xl"
 		>
-			<div className="flex justify-between items-center">
+			<div className="flex flex-col lg:flex-row justify-between gap-2 lg:gap-0 lg:items-center">
 				<span className="text-xl font-semibold">{card.name}</span>
 				<div className="flex gap-4 items-center">
 					<Image src={mastercard} alt="equinest Logo" />

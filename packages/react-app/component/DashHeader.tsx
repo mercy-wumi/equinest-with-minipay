@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import Link from "next/link";
-// import { ConnectButton } from "@rainbow-me/rainbowkit";
 import Image from "next/image";
+import MobileDash from "./MobileDash";
 import Logo from "../assets/images/navlogo.svg";
 import { useEffect, useState } from "react";
 import { useConnect } from "wagmi";
@@ -22,6 +22,11 @@ const DashHeader: FC<HeaderProps> = ({ title, backBtn }) => {
 		menus: "border-[1px] border-white rounded-md px-4 py-2 font-bold hover:bg-primaryYellow hover:text-primaryBlack hover:border-0",
 		menuActive:
 			"rounded-md px-4 py-2 bg-primaryYellow text-primaryBlack font-bold",
+	};
+	const [isDashMenuOpen, setIsDashMenuOpen] = useState(false);
+
+	const toggleDashMenu = () => {
+		setIsDashMenuOpen(!isDashMenuOpen);
 	};
 
 	// const [hideConnectBtn, setHideConnectBtn] = useState(false);
@@ -68,6 +73,39 @@ const DashHeader: FC<HeaderProps> = ({ title, backBtn }) => {
 							</Link>
 						</div>
 					</div>
+					<button className="lg:hidden" onClick={toggleDashMenu}>
+					
+						{isDashMenuOpen ? (
+							<svg
+								className="w-6 h-6 text-white cursor-pointer"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke="currentColor"
+							>
+								<path
+									strokeLinecap="round"
+									strokeLinejoin="round"
+									strokeWidth="2"
+									d="M6 18L18 6M6 6l12 12"
+								/>
+							</svg>
+						) : (
+							<svg
+								className="w-6 h-6 text-white cursor-pointer"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke="currentColor"
+							>
+								<path
+									strokeLinecap="round"
+									strokeLinejoin="round"
+									strokeWidth="2"
+									d="M4 6h16M4 12h16m-7 6h7"
+								/>
+							</svg>
+						)}
+					</button>
+					<MobileDash isOpen={isDashMenuOpen} />
 					{/* <div className="hidden lg:flex items-center justify-end gap-4">
 						<Image src={setting} alt="setting" className="w-[17%] h-auto" />
 						<Image
