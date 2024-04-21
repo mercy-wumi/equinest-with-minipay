@@ -7,6 +7,7 @@ interface MenuItem {
 	text: string;
 }
 
+
 interface MobileNavbarProps {
 	links: MenuItem[];
 	isOpen: boolean;
@@ -23,7 +24,7 @@ const MobileNavbar: React.FC<MobileNavbarProps> = ({ links, isOpen }) => {
 		>
 			<div
 				className={`mx-auto bg-lightGray p-5 py-10 flex flex-col gap-4 ${
-					isOpen ? "h-[50%]" : "h-0 overflow-hidden"
+					isOpen ? "h-[65%]" : "h-0 overflow-hidden"
 				}`}
 			>
 				<ul className="text-white flex flex-col gap-6 text-center">
