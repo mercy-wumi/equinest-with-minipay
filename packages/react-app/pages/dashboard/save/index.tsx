@@ -7,23 +7,23 @@ const Save = () => {
   // const { emailAddress, fullName } = useContext(userContext);
   const save = [
     {
-      title: "Safe Lock",
-      subtitle:
-        "Lock your money without access for a period of time and get 5% interest",
-      active: "false",
-      link: "",
-    },
-    {
       title: "Thrift Savings",
       subtitle:
         "Save money with your friends collectively as a team and get 5% interest",
-      active: "true",
+      active: "false",
       link: "/dashboard/save/thrift-save",
+    },
+    {
+      title: "Safe Lock",
+      subtitle:
+        "Lock your money without access for a period of time towards a specific goals.",
+      active: "true",
+      link: "/dashboard/save/save-lock",
     },
     {
       title: "Target savings",
       subtitle:
-        "Save towards a specific goal/purpose within a defined period of time",
+        "Save towards a specific goal/purpose within a defined period of time and get 5% interest",
       active: "false",
       link: "",
     },
