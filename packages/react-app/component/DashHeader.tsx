@@ -1,16 +1,12 @@
+"use client";
+
 import React, { FC } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import MobileDash from "./MobileDash";
-import Logo from "../assets/images/navlogo.svg";
-import { useEffect, useState } from "react";
-import { useConnect } from "wagmi";
-import { injected } from "wagmi/connectors";
+import { useState } from "react";
+
 import logo from "../assets/equivestLogo.svg";
-import notification from "../assets/notification.svg";
-import user from "../assets/user.svg";
-import setting from "../assets/setting.svg";
-import back from "../assets/back.svg";
 
 interface HeaderProps {
   title?: string;
@@ -116,26 +112,6 @@ const DashHeader: FC<HeaderProps> = ({ title, backBtn }) => {
             )}
           </button>
           <MobileDash isOpen={isDashMenuOpen} />
-          {/* <div className="hidden lg:flex items-center justify-end gap-4">
-						<Image src={setting} alt="setting" className="w-[17%] h-auto" />
-						<Image
-							src={notification}
-							alt="notification"
-							className="w-[14%] h-auto"
-						/>
-						<Image src={user} alt="user" />
-					</div>
-					<Image src={user} alt="user" className="lg:hidden" /> */}
-          {/* <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-						{!hideConnectBtn && (
-							<ConnectButton
-								showBalance={{
-									smallScreen: true,
-									largeScreen: false,
-								}}
-							/>
-						)}
-					</div> */}
         </nav>
         <div className="flex items-center mt-6">
           <p className="font-bold text-3xl ml-4">{title}</p>
