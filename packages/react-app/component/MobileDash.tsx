@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { PrimaryButton } from "./Button";
 
 interface MobileDashProps {
   isOpen: boolean;
