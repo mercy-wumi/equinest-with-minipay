@@ -6,6 +6,12 @@ interface MobileDashProps {
 }
 
 const MobileDash: React.FC<MobileDashProps> = ({ isOpen }) => {
+  let pathName;
+
+  if (typeof window !== "undefined") {
+    pathName = window.location.pathname;
+  }
+
   return (
     <div
       className={`transition-all duration-200 ${
@@ -23,7 +29,7 @@ const MobileDash: React.FC<MobileDashProps> = ({ isOpen }) => {
           <Link
             href="/dashboard"
             className={`${
-              window.location.pathname === "/dashboard"
+				pathName === "/dashboard"
                 ? "text-primaryYellow"
                 : ""
             } }`}
@@ -33,7 +39,7 @@ const MobileDash: React.FC<MobileDashProps> = ({ isOpen }) => {
           <Link
             href="/dashboard/save"
             className={`${
-              window.location.pathname === "/dashboard/save"
+              pathName === "/dashboard/save"
                 ? "text-primaryYellow"
                 : ""
             } }`}
@@ -43,7 +49,7 @@ const MobileDash: React.FC<MobileDashProps> = ({ isOpen }) => {
           <Link
             href="/dashboard/invest"
             className={`${
-              window.location.pathname === "/dashboard/invest"
+              pathName === "/dashboard/invest"
                 ? "text-primaryYellow"
                 : ""
             } }`}
@@ -53,7 +59,7 @@ const MobileDash: React.FC<MobileDashProps> = ({ isOpen }) => {
           <Link
             href="/dashboard/community"
             className={`${
-              window.location.pathname === "/dashboard/community"
+              pathName === "/dashboard/community"
                 ? "text-primaryYellow"
                 : ""
             } }`}

@@ -1,5 +1,3 @@
-"use client";
-
 import React, { FC } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -26,6 +24,12 @@ const DashHeader: FC<HeaderProps> = ({ title, backBtn }) => {
     setIsDashMenuOpen(!isDashMenuOpen);
   };
 
+  let pathName;
+
+  if (typeof window !== "undefined") {
+    pathName = window.location.pathname;
+  }
+
   return (
     <header className="w-full">
       <div className="hidden lg:flex items-center justify-center bg-primaryBlack py-3">
@@ -41,7 +45,7 @@ const DashHeader: FC<HeaderProps> = ({ title, backBtn }) => {
               <Link
                 href="/dashboard"
                 className={`${
-                  window.location.pathname === "/dashboard"
+                  pathName === "/dashboard"
                     ? style.menuActive
                     : style.menus
                 } }`}
@@ -51,7 +55,7 @@ const DashHeader: FC<HeaderProps> = ({ title, backBtn }) => {
               <Link
                 href="/dashboard/save"
                 className={`${
-                  window.location.pathname === "/dashboard/save"
+                  pathName === "/dashboard/save"
                     ? style.menuActive
                     : style.menus
                 } }`}
@@ -61,7 +65,7 @@ const DashHeader: FC<HeaderProps> = ({ title, backBtn }) => {
               <Link
                 href="/dashboard/invest"
                 className={`${
-                  window.location.pathname === "/dashboard/invest"
+                  pathName === "/dashboard/invest"
                     ? style.menuActive
                     : style.menus
                 } }`}
@@ -71,7 +75,7 @@ const DashHeader: FC<HeaderProps> = ({ title, backBtn }) => {
               <Link
                 href="/dashboard/community"
                 className={`${
-                  window.location.pathname === "/dashboard/community"
+                  pathName === "/dashboard/community"
                     ? style.menuActive
                     : style.menus
                 } }`}
