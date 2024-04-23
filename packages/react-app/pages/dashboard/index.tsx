@@ -4,26 +4,48 @@ import DashCards from "../../component/DashCards";
 import DashHeader from "../../component/DashHeader";
 // import { userContext } from "../userContext";
 
+// const cards = [
+// 	{
+// 		name: "Total Balance",
+// 		amount: "N10,700.00",
+// 		btn: true,
+// 		profit_loss: false,
+// 	},
+// 	{
+// 		name: "Lock Savings",
+// 		amount: "N5,000.00",
+// 		btn: true ,
+// 		profit_loss: true,
+// 	},
+// 	{
+// 		name: "Withdrawn Savings",
+// 		amount: "N2,700.00",
+// 		btn: true,
+// 		profit_loss: true,
+// 	},
+// ];
+
 const cards = [
 	{
 		name: "Total Balance",
 		amount: "N10,700.00",
-		btn: true,
+		btn: { text: "Deposit", link: "/dashboard" },
 		profit_loss: false,
 	},
 	{
 		name: "Lock Savings",
 		amount: "N5,000.00",
-		btn: false,
+		btn: { text: "Lock", link: "/dashboard/save/save-lock" },
 		profit_loss: true,
 	},
 	{
 		name: "Withdrawn Savings",
 		amount: "N2,700.00",
-		btn: false,
+		btn: { text: "Withdraw", link: "/dashboard/withdraw" },
 		profit_loss: true,
 	},
 ];
+
 
 const transactions = [
 	{
@@ -62,7 +84,7 @@ const DashOverview = () => {
 	return (
 		<>
 			<DashHeader title="Welcome back!" backBtn={false} />
-			<div className="px-4 md:px-8 xl:px-16 mb-16">
+			<div className="px-4 md:px-8 xl:px-16 mb-16 py-2">
 				<div className="-mt-4 xl:-mt-10 grid-cols-1 md:grid-cols-2 grid xl:grid-cols-3 gap-8">
 					{cards.map((card, index) => (
 						<DashCards card={card} key={index} />
