@@ -163,6 +163,33 @@ export const useWeb3 = () => {
 		return receipt;
 	};
 
+
+  const withdraw = async (amount: string) => {
+		let walletClient = createWalletClient({
+			transport: custom(window.ethereum),
+			chain: celoAlfajores,
+		});
+
+		let [address] = await walletClient.getAddresses();
+
+		const amountInWei = parseEther(amount);
+
+		const tx = await walletClient.writeContract({
+			address: LOCK_FUND,
+			abi: LockFunds.abi,
+			functionName: "withdraw",
+			account: address,
+			args: [amountInWei],
+      value: amountInWei
+		});
+
+		let receipt = await publicClient.waitForTransactionReceipt({
+			hash: tx,
+		});
+
+		return receipt;
+  };
+
 	return {
 		address,
 		getUserAddress,
@@ -171,5 +198,6 @@ export const useWeb3 = () => {
 		getNFTs,
 		signTransaction,
 		lock,
+    withdraw,
 	};
 };

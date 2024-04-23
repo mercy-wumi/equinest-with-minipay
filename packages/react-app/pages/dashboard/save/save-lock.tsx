@@ -65,7 +65,6 @@ const SaveLock: React.FC = () => {
           console.log(error);
         } finally {
           setSigningLoading(false);
-          
         }
       }
   }
