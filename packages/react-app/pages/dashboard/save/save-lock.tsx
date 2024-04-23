@@ -33,23 +33,23 @@ const SaveLock: React.FC = () => {
     getUserAddress();
   }, []);
 
-  useEffect(() => {
-    async function sendingCUSD() {
-      if (address) {
-        setSigningLoading(true);
-        try {
-          const tx = await sendCUSD(address, "1");
-          setTx(tx);
-        } catch (error) {
-          console.log(error);
-        } finally {
-          setSigningLoading(false);
-        }
-      }
-    }
+  // useEffect(() => {
+  //   async function sendingCUSD() {
+  //     if (address) {
+  //       setSigningLoading(true);
+  //       try {
+  //         const tx = await sendCUSD(address, "1");
+  //         setTx(tx);
+  //       } catch (error) {
+  //         console.log(error);
+  //       } finally {
+  //         setSigningLoading(false);
+  //       }
+  //     }
+  //   }
 
-    sendingCUSD();
-  }, []);
+  //   sendingCUSD();
+  // }, []);
 
   async function lockFund(e: any) {
     e.preventDefault();
@@ -65,6 +65,7 @@ const SaveLock: React.FC = () => {
           console.log(error);
         } finally {
           setSigningLoading(false);
+          
         }
       }
   }
