@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { PrimaryButton } from "../../../component/Button";
 import { useRouter } from "next/router";
 import { useWeb3 } from "@/contexts/useWeb3";
 import DashHeader from "../../../component/DashHeader";
@@ -27,29 +26,11 @@ const SaveLock: React.FC = () => {
   }
 
   const router = useRouter();
-  const { lock, address, getUserAddress, sendCUSD } = useWeb3();
+  const { lock, address, getUserAddress } = useWeb3();
 
   useEffect(() => {
     getUserAddress();
   }, []);
-
-  // useEffect(() => {
-  //   async function sendingCUSD() {
-  //     if (address) {
-  //       setSigningLoading(true);
-  //       try {
-  //         const tx = await sendCUSD(address, "1");
-  //         setTx(tx);
-  //       } catch (error) {
-  //         console.log(error);
-  //       } finally {
-  //         setSigningLoading(false);
-  //       }
-  //     }
-  //   }
-
-  //   sendingCUSD();
-  // }, []);
 
   async function lockFund(e: any) {
     e.preventDefault();
@@ -61,11 +42,12 @@ const SaveLock: React.FC = () => {
         try {
           const tx = await lock(lockAmount, dateToNumber);
           setTx(tx);
+
+          if (tx) router.push("/dashboard");
         } catch (error) {
           console.log(error);
         } finally {
           setSigningLoading(false);
-          
         }
       }
   }
@@ -74,7 +56,7 @@ const SaveLock: React.FC = () => {
     <>
       <DashHeader backBtn={true} />
       <section>
-        <div className="flex flex-row justify-center items-center w-[50%] mx-auto">
+        <div className="flex flex-row justify-center items-center w-[90%] md:w-[70%] xl:w-[50%] mx-auto">
           <form className=" w-full py-8 lg:py-14 flex flex-col gap-4 lg:gap-10 justify-between">
             <div className="flex flex-col gap-2">
               <h3 className="text-3xl text-center font-semibold">
