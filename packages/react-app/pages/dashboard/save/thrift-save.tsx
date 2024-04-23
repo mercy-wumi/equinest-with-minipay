@@ -6,7 +6,7 @@ import Image from "next/image";
 const ThriftSave = () => {
   return (
     <>
-      <DashHeader backBtn={true} />
+      <DashHeader />
       <div className="px-8 md:px-16 flex flex-col justify-center items-center gap-4 my-12">
         <Image src={save} alt="save" />
         <div className="flex items-center flex-col">

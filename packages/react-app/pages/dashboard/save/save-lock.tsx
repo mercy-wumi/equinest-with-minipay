@@ -18,6 +18,13 @@ const SaveLock: React.FC = () => {
   const [signingLoading, setSigningLoading] = useState(false);
   const [tx, setTx] = useState<any>(undefined);
 
+  const [transac, setTransac] = useState({
+    transType: "",
+    dateTime: "",
+    amount: "",
+    status: "",
+  });
+
   let dateToNumber: bigint;
 
   if (unlockTime !== undefined) {
@@ -54,7 +61,7 @@ const SaveLock: React.FC = () => {
 
   return (
     <>
-      <DashHeader backBtn={true} />
+      <DashHeader setTransac={setTransac} />
       <section>
         <div className="flex flex-row justify-center items-center w-[90%] md:w-[70%] xl:w-[50%] mx-auto">
           <form className=" w-full py-8 lg:py-14 flex flex-col gap-4 lg:gap-10 justify-between">

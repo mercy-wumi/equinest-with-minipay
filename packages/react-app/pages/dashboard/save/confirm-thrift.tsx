@@ -38,7 +38,7 @@ const ConfirmThrift = () => {
 
   return (
     <>
-      <DashHeader backBtn={true} />
+      <DashHeader />
       {successful ? (
         <SuccessModal
           successText="created a new thrift plan"

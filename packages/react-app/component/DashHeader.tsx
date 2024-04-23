@@ -7,12 +7,19 @@ import { useWeb3 } from "../contexts/useWeb3";
 
 import logo from "../assets/equivestLogo.svg";
 
-interface HeaderProps {
-	title?: string;
-	backBtn?: boolean;
+type Transaction = {
+	transType: string,
+    dateTime: string,
+    amount: string,
+    status: string,
 }
 
-const DashHeader: FC<HeaderProps> = ({ title, backBtn }) => {
+interface HeaderProps {
+	title?: string;
+	setTransac?: React.Dispatch<React.SetStateAction<Transaction>>;
+}
+
+const DashHeader: FC<HeaderProps> = ({ title, setTransac }) => {
 	const { address, getUserAddress } = useWeb3();
 
 	useEffect(() => {
@@ -61,7 +68,7 @@ const DashHeader: FC<HeaderProps> = ({ title, backBtn }) => {
 							<Link
 								href="/dashboard/save"
 								className={`${
-									pathName === "/dashboard/save"
+									pathName?.includes("/dashboard/save")
 										? style.menuActive
 										: style.menus
 								} }`}
@@ -81,7 +88,7 @@ const DashHeader: FC<HeaderProps> = ({ title, backBtn }) => {
 							<Link
 								href="/dashboard/community"
 								className={`${
-									pathName === "/dashboard/community"
+									pathName?.includes("/dashboard/community")
 										? style.menuActive
 										: style.menus
 								} }`}

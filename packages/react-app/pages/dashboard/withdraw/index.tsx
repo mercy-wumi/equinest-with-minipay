@@ -35,7 +35,7 @@ const Withdraw: React.FC = () => {
 
 	return (
 		<>
-			<DashHeader backBtn={true} />
+			<DashHeader />
 			<section>
 				<div className="flex flex-row justify-center items-center w-[50%] mx-auto">
 					<form className=" w-full py-8 lg:py-14 flex flex-col gap-4 lg:gap-10 justify-between">

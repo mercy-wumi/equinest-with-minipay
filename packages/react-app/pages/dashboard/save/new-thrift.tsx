@@ -18,35 +18,17 @@ interface FormData {
 
 const NewThriftForm: React.FC = () => {
   const router = useRouter();
-  // const { loading, setLoading } = useContext(userContext);
-
-  // const {
-  //   handleSubmit,
-  //   register,
-  //   formState: { errors },
-  // } = useForm<FormData>();
-  // const onSubmit = async (data: FormData, e: React.FormEvent<HTMLFormElement>) => {
-  //   e.preventDefault();
-  //   console.log(data);
-  //   try {
-  //     setLoading(true);
-  //     await new Promise((resolve) => setTimeout(resolve, 2000));
-  //     router.push("/dashboard/confirm-thrift", { state: data });
-  //   } catch (error) {
-  //     console.error("Thrift creation failed", error);
-  //   } finally {
-  //     setLoading(false);
-  //   }
-  // };
 
   return (
     <>
-      <DashHeader backBtn={true} />
+      <DashHeader />
       <section>
         <div className="flex flex-row justify-center items-center w-[50%] mx-auto">
           <form
             action=""
-            // onSubmit={handleSubmit(onSubmit)}
+            onSubmit={(e) => {
+              e.preventDefault();
+            }}
             className=" w-full py-8 lg:py-14 flex flex-col gap-4 lg:gap-10 justify-between"
           >
             <div className="flex flex-col gap-2">
@@ -65,13 +47,8 @@ const NewThriftForm: React.FC = () => {
                   className="py-2 px-3 lg:py-3 border border-darkGray rounded placeholder:text-[#c5c3c3a8]"
                   name="thriftTitle"
                   placeholder="Christmas"
-                  // {...register("thriftTitle", {
-                  //   required: "Thrift title is required",
-                  // })}
                 />
-                <span className="text-red text-sm ">
-                  {/* {errors.thriftTitle && errors.thriftTitle.message} */}
-                </span>
+                <span className="text-red text-sm "></span>
               </div>
               <div className="flex flex-col w-full gap-2">
                 <label htmlFor="numberOfParticipants" className="">
@@ -83,14 +60,8 @@ const NewThriftForm: React.FC = () => {
                   className="signup-input-form py-2 px-3 lg:py-3 border border-darkGray rounded placeholder:text-[#c5c3c3a8]"
                   name="numberOfParticipants"
                   placeholder="10"
-                  // 	{...register("numberOfParticipants", {
-                  // 		required: "Number of participants is required",
-                  // 	})}
                 />
-                <span className="text-red text-sm ">
-                  {/* {errors.numberOfParticipants &&
-										errors.numberOfParticipants.message} */}
-                </span>
+                <span className="text-red text-sm "></span>
               </div>
 
               <div className="flex flex-col w-full gap-2">
@@ -103,14 +74,8 @@ const NewThriftForm: React.FC = () => {
                   className=" py-2 px-3 lg:py-3 border border-darkGray rounded placeholder:text-[#c5c3c3a8]"
                   name="savingsAmount"
                   placeholder="5000"
-                  // {...register("savingsAmount", {
-                  // 	required: "Savings amount is required",
-                  // })}
                 />
-                <span className="text-red text-sm ">
-                  {/* {errors.savingsAmount &&
-										errors.savingsAmount.message} */}
-                </span>
+                <span className="text-red text-sm "></span>
               </div>
 
               <div className="flex flex-col w-full gap-2">
@@ -123,13 +88,8 @@ const NewThriftForm: React.FC = () => {
                   className=" py-2 px-3 lg:py-3 border border-darkGray rounded placeholder:text-[#c5c3c3a8]"
                   name="interestRate"
                   placeholder="5% p.a"
-                  // {...register("interestRate", {
-                  // 	required: "Interest rate is required",
-                  // })}
                 />
-                <span className="text-red text-sm ">
-                  {/* {errors.interestRate && errors.interestRate.message} */}
-                </span>
+                <span className="text-red text-sm "></span>
               </div>
 
               <div className="flex flex-col w-full gap-2">
@@ -142,13 +102,8 @@ const NewThriftForm: React.FC = () => {
                   className=" py-2 px-3 lg:py-3 border border-darkGray rounded placeholder:text-[#c5c3c3a8]"
                   name="startDate"
                   placeholder="22/08/2023"
-                  // {...register("startDate", {
-                  // 	required: "Start date is required",
-                  // })}
                 />
-                <span className="text-red text-sm ">
-                  {/* {errors.startDate && errors.startDate.message} */}
-                </span>
+                <span className="text-red text-sm "></span>
               </div>
               <div className="flex flex-col w-full gap-2">
                 <label htmlFor="endDate" className="">
@@ -160,23 +115,13 @@ const NewThriftForm: React.FC = () => {
                   className=" py-2 px-3 lg:py-3 border border-darkGray rounded placeholder:text-[#c5c3c3a8]"
                   name="endDate"
                   placeholder="21/10/2023"
-                  // {...register("endDate", {
-                  // 	required: "End date is required",
-                  // })}
                 />
-                <span className="text-red text-sm ">
-                  {/* {errors.endDate && errors.endDate.message} */}
-                </span>
+                <span className="text-red text-sm "></span>
               </div>
             </div>
 
             <div className="flex flex-col gap-3 text-center">
-              <PrimaryButton
-                className={` w-[65%] shadow`}
-                text="Create"
-                // disabled={loading}
-                // text={loading ? "Creating Thrift..." : "Create Thrift"}
-              />
+              <PrimaryButton className={` w-[65%] shadow`} text="Create" />
             </div>
           </form>
         </div>
