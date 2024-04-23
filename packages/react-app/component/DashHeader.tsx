@@ -7,19 +7,12 @@ import { useWeb3 } from "../contexts/useWeb3";
 
 import logo from "../assets/equivestLogo.svg";
 
-type Transaction = {
-	transType: string,
-    dateTime: string,
-    amount: string,
-    status: string,
-}
 
 interface HeaderProps {
 	title?: string;
-	setTransac?: React.Dispatch<React.SetStateAction<Transaction>>;
 }
 
-const DashHeader: FC<HeaderProps> = ({ title, setTransac }) => {
+const DashHeader: FC<HeaderProps> = ({ title }) => {
 	const { address, getUserAddress } = useWeb3();
 
 	useEffect(() => {

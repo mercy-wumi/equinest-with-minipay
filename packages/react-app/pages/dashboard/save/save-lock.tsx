@@ -50,7 +50,15 @@ const SaveLock: React.FC = () => {
           const tx = await lock(lockAmount, dateToNumber);
           setTx(tx);
 
-          if (tx) router.push("/dashboard");
+          if (tx) {
+            setTransac({
+              transType: "Lock",
+              dateTime: unlockTime,
+              amount: lockAmount,
+              status: "success",
+            });
+            router.push("/dashboard");
+          }
         } catch (error) {
           console.log(error);
         } finally {
@@ -61,7 +69,7 @@ const SaveLock: React.FC = () => {
 
   return (
     <>
-      <DashHeader setTransac={setTransac} />
+      <DashHeader />
       <section>
         <div className="flex flex-row justify-center items-center w-[90%] md:w-[70%] xl:w-[50%] mx-auto">
           <form className=" w-full py-8 lg:py-14 flex flex-col gap-4 lg:gap-10 justify-between">
