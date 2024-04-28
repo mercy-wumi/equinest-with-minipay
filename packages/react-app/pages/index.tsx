@@ -1,7 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 
 import { useWeb3 } from "@/contexts/useWeb3";
-
 import MainHero from "../component/MainHero";
 import ChooseBetter from "../component/ChooseBetter";
 import Products from "../component/Products";

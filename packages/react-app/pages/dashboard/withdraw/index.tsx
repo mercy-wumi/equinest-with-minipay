@@ -45,10 +45,10 @@ const Withdraw: React.FC = () => {
 		<>
 			<DashHeader />
 			<section>
-				<div className="flex flex-row justify-center items-center w-[50%] mx-auto">
-					<form className=" w-full py-8 lg:py-14 flex flex-col gap-4 lg:gap-10 justify-between">
+				<div className="flex flex-row justify-center items-center w-[90%] md:w-[70%] xl:w-[50%] mx-auto">
+					<form className="w-full py-8 lg:py-14 flex flex-col gap-6 lg:gap-10 justify-between">
 						<div className="flex flex-col gap-2">
-							<h3 className="text-3xl text-center font-semibold">
+							<h3 className="text-lg lg:text-3xl text-center font-semibold">
 								Withdraw from your savings
 							</h3>
 						</div>
@@ -73,7 +73,7 @@ const Withdraw: React.FC = () => {
 
 						<div className="flex flex-col gap-3 text-center">
 							<button
-								className={`rounded-lg gap-2 mx-auto w-[fit-content] py-[0.5rem] px-2 whitespace-nowrap text-base text-darkGray bg-primaryYellow font-semibold mt-2 md:px-5 hover:shadow-md transition-all ease-in cursor-pointer`}
+								className={`rounded-lg mx-auto py-[0.6rem] px-6 whitespace-nowrap text-base text-darkGray bg-primaryYellow font-semibold mt-2 hover:shadow-md transition-all ease-in cursor-pointer`}
 								onClick={(e: any) => withdrawFunds(e)}
 							>
 								{signingLoading ? "Loading" : "Withdraw"}
