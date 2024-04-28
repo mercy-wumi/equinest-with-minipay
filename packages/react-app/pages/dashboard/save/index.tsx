@@ -37,7 +37,7 @@ const Save = () => {
   return (
     <>
       <DashHeader />
-      <div className="px-8 md:px-16 my-12  grid-cols-1 md:grid-cols-2 grid xl:grid-cols-3 gap-x-16 gap-y-8 text-primaryBlack -mt-6 xl:-mt-10">
+      <div className="px-8 md:px-16 my-12 grid-cols-1 md:grid-cols-2 grid xl:grid-cols-3 gap-x-16 gap-y-8 text-primaryBlack xl:-mt-10">
         {save.map((data, index) => (
           <Link href={data.link} key={index}>
             <div
