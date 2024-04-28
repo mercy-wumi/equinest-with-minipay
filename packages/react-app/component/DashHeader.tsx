@@ -41,7 +41,7 @@ const DashHeader: FC<HeaderProps> = ({ title }) => {
       <div className="hidden lg:flex items-center justify-center bg-primaryBlack py-3">
         <Image src={logo} alt="equinest Logo" className="w-1/12" />
       </div>
-      <div className="bg-lightGray text-white h-25 lg:h-[15rem] px-4 md:px-8 xl:px-16">
+      <div className="bg-lightGray text-white h-52 lg:h-[15rem] px-4 md:px-8 xl:px-16">
         <nav className="flex justify-between items-center pt-8">
           <div className="flex gap-12">
             <Link href="/">
@@ -122,7 +122,7 @@ const DashHeader: FC<HeaderProps> = ({ title }) => {
           <MobileDash isOpen={isDashMenuOpen} />
         </nav>
         <div className="flex items-center mt-8">
-          <p className="font-bold text-3xl">{title}</p>
+          <p className="font-bold text-2xl lg:text-3xl">{title}</p>
         </div>
         {address ? (
           <p className="py-2">{`${address?.slice(0, 6)}***${address?.slice(
