@@ -7,15 +7,6 @@ import { useRouter } from "next/router";
 
 import DashHeader from "../../../component/DashHeader";
 
-interface FormData {
-  thriftTitle: string;
-  numberOfParticipants: number;
-  savingsAmount: number;
-  interestRate: number;
-  startDate: string;
-  endDate: string;
-}
-
 const NewThriftForm: React.FC = () => {
   const router = useRouter();
 
@@ -121,7 +112,7 @@ const NewThriftForm: React.FC = () => {
             </div>
 
             <div className="flex flex-col gap-3 text-center">
-              <PrimaryButton className={` w-[65%] shadow`} text="Create" />
+              <PrimaryButton className="w-[65%] shadow" text="Create" />
             </div>
           </form>
         </div>

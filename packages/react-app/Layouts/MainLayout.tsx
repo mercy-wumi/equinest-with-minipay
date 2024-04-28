@@ -3,18 +3,16 @@ import Footer from "../component/Footer";
 import Navbar from "../component/Navbar";
 
 interface Props {
-  children: ReactNode;
+	children: ReactNode;
 }
 const MainLayout: FC<Props> = ({ children }) => {
-  return (
-    <>
-      <div className="overflow-hidden flex flex-col min-h-screen">
-        <Navbar />
-        <div className="">{children}</div>
-        <Footer />
-      </div>
-    </>
-  );
+	return (
+		<div className="overflow-hidden flex flex-col min-h-screen">
+			<Navbar />
+			<div className="">{children}</div>
+			<Footer />
+		</div>
+	);
 };
 
 export default MainLayout;
