@@ -3,11 +3,14 @@ import { PrimaryButton } from "../../../component/Button";
 import { useRouter } from "next/router";
 import { useWeb3 } from "@/contexts/useWeb3";
 import DashHeader from "../../../component/DashHeader";
+import TransactionModal from "@/component/TransactionModal";
 
 const Withdraw: React.FC = () => {
 	const [amountToWithdraw, setAmountToWithdraw] = useState<string>();
 	const [signingLoading, setSigningLoading] = useState(false);
 	const [tx, setTx] = useState<any>(undefined);
+	const [isOpen, setIsOpen] = useState(false);
+	const [success, setSuccess] = useState(false);
 
 	const router = useRouter();
 	const { withdraw, address, getUserAddress } = useWeb3();
@@ -22,11 +25,16 @@ const Withdraw: React.FC = () => {
 		if (amountToWithdraw !== undefined)
 			if (address) {
 				setSigningLoading(true);
+				setIsOpen(true);
 				try {
 					const tx = await withdraw(amountToWithdraw);
 					setTx(tx);
+					setSuccess(true);
+					setIsOpen(true);
 				} catch (error) {
 					console.log(error);
+					setSuccess(false);
+					setIsOpen(true);
 				} finally {
 					setSigningLoading(false);
 				}
@@ -74,6 +82,12 @@ const Withdraw: React.FC = () => {
 					</form>
 				</div>
 			</section>
+			<TransactionModal
+				isOpen={isOpen}
+				onClose={() => setIsOpen(false)}
+				success={success}
+				loading={signingLoading}
+			/>
 		</>
 	);
 };
